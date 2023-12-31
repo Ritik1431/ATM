@@ -1,0 +1,127 @@
+.container3 {
+  .top {
+    display: flex;
+
+    img {
+      width: 10rem;
+      height: 7rem;
+    }
+    .user {
+      width: 100%;
+      margin-left: 30%;
+      margin-top: 4rem;
+      font-size: 2rem;
+      color: aliceblue;
+    }
+  }
+
+  .heading {
+    padding-left: 15%;
+    margin-top: 5rem;
+    color: aliceblue;
+    border: 1px solid #646cff;
+  }
+  .middle {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    color: aliceblue;
+    .left {
+      button {
+        margin-top: 5px;
+        border-radius: 8px;
+        border: 1px solid transparent;
+        padding: 0.6em 1.2em;
+        font-size: 1.3em;
+        font-weight: 500;
+        font-family: inherit;
+        background-color: #1a1a1a;
+        color: aliceblue;
+        cursor: pointer;
+        transition: border-color 0.25s;
+      }
+      button:hover {
+        border-color: #646cff;
+      }
+      button:focus,
+      button:focus-visible {
+        outline: 4px auto -webkit-focus-ring-color;
+      }
+    }
+    .right {
+      button {
+        margin-left: 60px;
+        margin-top: 5px;
+        border-radius: 8px;
+        border: 1px solid transparent;
+        padding: 0.6em 1.2em;
+        font-size: 1.3em;
+        font-weight: 500;
+        font-family: inherit;
+        background-color: #1a1a1a;
+        color: aliceblue;
+        cursor: pointer;
+        transition: border-color 0.25s;
+      }
+      button:hover {
+        border-color: #646cff;
+      }
+      button:focus,
+      button:focus-visible {
+        outline: 4px auto -webkit-focus-ring-color;
+      }
+    }
+  }
+  .inputs {
+    // margin-left: 42%;
+    align-items: flex-end;
+    align-items: center;
+    h2 {
+      margin-left: 42%;
+      color: aliceblue;
+      margin-bottom: 1rem;
+      text-decoration: underline;
+    }
+    input {
+      
+      display: flex;
+      margin-left: 42%;
+      border: none;
+      border-bottom: 2px solid aliceblue;
+      font-size: 1rem;
+      align-items: center;
+      text-align: center;
+      color: aliceblue;
+      border-color: aliceblue;
+      &:focus {
+        outline: none;
+      }
+    }
+    .buttons {
+      margin-top: 5rem;
+      display: flex;
+      justify-content: space-between;
+      button {
+        margin-left: 60px;
+        margin-top: 5px;
+        border-radius: 8px;
+        border: 1px solid transparent;
+        padding: 0.6em 1.2em;
+        font-size: 1.3em;
+        font-weight: 500;
+        font-family: inherit;
+        background-color: #1a1a1a;
+        color: aliceblue;
+        cursor: pointer;
+        transition: border-color 0.25s;
+      }
+      button:hover {
+        border-color: #646cff;
+      }
+      button:focus,
+      button:focus-visible {
+        outline: 4px auto -webkit-focus-ring-color;
+      }
+    }
+  }
+}

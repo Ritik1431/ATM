@@ -5,6 +5,7 @@ import Lottie from 'react-lottie';
 import animationData from './../../assets/debit.json';
 import animationData1 from './../../assets/load.json'
 import { Link } from 'react-router-dom';
+
 const Homepage = () => {
   const [showDiv, setShowDiv] = useState(false);
 

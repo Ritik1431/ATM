@@ -1,14 +1,16 @@
-import {React ,useState,useEffect} from 'react'
+import { React, useState, useEffect } from 'react'
 import logo from './../../assets/bank.png'
 import './Pin.scss'
 import Lottie from 'react-lottie';
 import animationData from './../../assets/debit.json';
 import animationData2 from './../../assets/pin.json';
-import { Link } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
+
 const Pin = () => {
     const [enteredPin, setEnteredPin] = useState('');
     const [shouldMove, setShouldMove] = useState(false);
     const [showDiv, setShowDiv] = useState(false);
+    const navigate = useNavigate()
 
     useEffect(() => {
         const timeoutId = setTimeout(() => {
@@ -24,6 +26,7 @@ const Pin = () => {
         // After 2 seconds, trigger the movement by setting shouldMove to true
         const timeoutId = setTimeout(() => {
             setShouldMove(true);
+
         }, 2000);
 
         // Cleanup to prevent memory leaks
@@ -35,11 +38,11 @@ const Pin = () => {
         const newPin = e.target.value.replace(/\D/g, '').slice(0, 4);
         setEnteredPin(newPin);
     };
-    
+
     const handleSubmit = () => {
         if (enteredPin === correctPin) {
             alert('PIN is correct!');
-            // <Link to=""/>
+            navigate("/withdrawl", { state: { Data: "Welcome Ritik" } })
             // You can replace this with your desired action
         } else {
             alert('Incorrect PIN. Please try again.');
@@ -85,7 +88,7 @@ const Pin = () => {
                         <div className="animation">
                             <Lottie options={defaultOptions2} height={150} width={150} />
                         </div>
-                </div>  
+                    </div>
                 )}
             </div>
         </div>

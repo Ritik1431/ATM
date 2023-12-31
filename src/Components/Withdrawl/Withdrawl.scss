@@ -1,6 +1,10 @@
 .container3 {
   .top {
     display: flex;
+    svg{
+      font-size: 1.5rem;
+      margin-left: 5px;
+    }
 
     img {
       width: 10rem;
@@ -16,10 +20,15 @@
   }
 
   .heading {
+    display: flex;
     padding-left: 15%;
     margin-top: 5rem;
     color: aliceblue;
     border: 1px solid #646cff;
+    svg{
+      font-size: 1.8rem;
+      margin-top: 4px;
+    }
   }
   .middle {
     display: flex;
@@ -80,7 +89,6 @@
       margin-left: 42%;
       color: aliceblue;
       margin-bottom: 1rem;
-      text-decoration: underline;
     }
     input {
       

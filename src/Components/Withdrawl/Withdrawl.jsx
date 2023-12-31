@@ -5,6 +5,9 @@ import './Withdrawl.scss'
 import Lottie from 'react-lottie';
 import animationData from './../../assets/cash.json';
 import './../Login/Loginpage';
+import { FcMoneyTransfer } from "react-icons/fc";
+import { FaUserAlt } from "react-icons/fa";
+
 const Withdrawl = () => {
 
   const [amount, setAmount] = useState('');
@@ -45,10 +48,12 @@ const Withdrawl = () => {
     <div className='container3'>
       <div className="top">
         <img src={logo} alt="" />
-        <div className="user">{location.state.Data},</div>
+        <div className="user">{location.state.Data}<FaUserAlt />,</div>
+
       </div>
       <div className="heading">
         <h2>Withdrawl</h2>
+        <FcMoneyTransfer/>
       </div>
       <div className="annimation">
         <Lottie options={defaultOptions} height={250} width={550} />
@@ -70,6 +75,7 @@ const Withdrawl = () => {
             <input type="number"
               value={amount}
               onChange={handleAmountChange}
+              placeholder='Enter Here'
             />
           </label>
           <div className="buttons">

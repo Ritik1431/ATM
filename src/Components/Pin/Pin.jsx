@@ -91,6 +91,7 @@ const Pin = () => {
                     </div>
                 )}
             </div>
+            <footer>*Note : default pin is 1234.</footer>
         </div>
     )
 }

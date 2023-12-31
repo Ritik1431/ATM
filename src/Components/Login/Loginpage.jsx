@@ -42,7 +42,7 @@ const Loginpage = () => {
         </div>
       </div>
 
-      
+      <footer>*Note : Only use login for now.</footer>
     </div>
   )
 }

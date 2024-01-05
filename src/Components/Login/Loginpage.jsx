@@ -1,18 +1,18 @@
 import React from 'react'
 import bankimage from './../../assets/bank.png'
 import './Loginpage.scss'
-import Lottie from 'react-lottie';
+import Lottie from 'lottie-react';
 import animationData from './../../assets/needhelp.json'; 
 import { Link } from 'react-router-dom';
 import Homepage from '../Homepage/Homepage';
 
 
 const Loginpage = () => {
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: animationData,
-  };
+//   const defaultOptions = {
+//     loop: true,
+//     autoplay: true,
+//     animationData: animationData,
+//   };
   return (
     <div className='container'>
       <div className="outer">
@@ -38,7 +38,13 @@ const Loginpage = () => {
           <h5>24/7 Available </h5>
         </div>
         <div className="lower">
-          <Lottie options={defaultOptions} height={50} width={50} />
+          {/* <Lottie options={defaultOptions} height={50} width={50} /> */}
+          <Lottie
+            animationData={animationData}
+            loop={true}
+            autoplay={true}
+            style={{ width: 50, height: 50 }}
+          />
         </div>
       </div>
 

@@ -1,4 +1,10 @@
 .container3 {
+  .annimation{
+    flex: 1;  // Grow to take up remaining vertical space
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .top {
     display: flex;
     svg{

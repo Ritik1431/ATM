@@ -1,7 +1,7 @@
-import { React, useState, useEffect } from 'react'
-import logo from './../../assets/bank.png'
-import './Pin.scss'
-import Lottie from 'react-lottie';
+import React, { useState, useEffect } from 'react';
+import logo from './../../assets/bank.png';
+import './Pin.scss';
+import Lottie from 'lottie-react';
 import animationData from './../../assets/debit.json';
 import animationData2 from './../../assets/pin.json';
 import { useNavigate } from "react-router-dom";
@@ -10,7 +10,7 @@ const Pin = () => {
     const [enteredPin, setEnteredPin] = useState('');
     const [shouldMove, setShouldMove] = useState(false);
     const [showDiv, setShowDiv] = useState(false);
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
     useEffect(() => {
         const timeoutId = setTimeout(() => {
@@ -26,7 +26,6 @@ const Pin = () => {
         // After 2 seconds, trigger the movement by setting shouldMove to true
         const timeoutId = setTimeout(() => {
             setShouldMove(true);
-
         }, 2000);
 
         // Cleanup to prevent memory leaks
@@ -49,6 +48,7 @@ const Pin = () => {
             setEnteredPin('');
         }
     };
+
     const defaultOptions = {
         loop: true,
         autoplay: true,
@@ -59,6 +59,7 @@ const Pin = () => {
         autoplay: true,
         animationData: animationData2,
     };
+
     return (
         <div className="container2">
             <div className="top">
@@ -67,8 +68,8 @@ const Pin = () => {
             </div>
             <div className="center">
                 <div className="left">
-                    <div className={`move-div ${shouldMove ? 'move-left' : ''}`} >
-                        <Lottie options={defaultOptions} height={400} width={400} />
+                    <div className={`move-div ${shouldMove ? 'move-left' : ''}`}>
+                        <Lottie animationData={animationData} loop={true} play={true} style={{ width: 400, height: 400 }} />
                     </div>
                 </div>
                 {showDiv && (
@@ -86,14 +87,14 @@ const Pin = () => {
                             <button onClick={handleSubmit}>Submit</button>
                         </div>
                         <div className="animation">
-                            <Lottie options={defaultOptions2} height={150} width={150} />
+                            <Lottie animationData={animationData2} loop={true} play={true} style={{ width: 150, height: 150 }} />
                         </div>
                     </div>
                 )}
             </div>
-            <footer>*Note : default pin is 1234.</footer>
+            <footer>*Note: default pin is 1234.</footer>
         </div>
-    )
+    );
 }
 
-export default Pin
+export default Pin;

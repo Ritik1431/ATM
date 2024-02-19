@@ -36,7 +36,7 @@ const Homepage = () => {
           <p>Welcome Guest,</p>
         </div>
         <div className="center">
-          <Lottie animationData={animationData} loop={true} style={{ width: 400, height: 400 }} />
+          <Lottie animationData={animationData} loop={true} style={{ width: 350, height: 350 }} />
         </div>
         <div className="bottom">
           <h2>Please Insert Your Card!</h2>

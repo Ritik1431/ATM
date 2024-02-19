@@ -69,7 +69,7 @@ const Pin = () => {
             <div className="center">
                 <div className="left">
                     <div className={`move-div ${shouldMove ? 'move-left' : ''}`}>
-                        <Lottie animationData={animationData} loop={true} play={true} style={{ width: 400, height: 400 }} />
+                        <Lottie animationData={animationData} loop={true} play={true} style={{ width: 350, height: 350 }} />
                     </div>
                 </div>
                 {showDiv && (
